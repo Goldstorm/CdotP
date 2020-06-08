@@ -1,35 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
+using cdotp.cwp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using cdotp.cwp.Models;
 
 namespace cdotp.cwp.Controllers
 {
-    public class HomeController : Controller
+    public class ApiController : Controller
     {
         private readonly ILogger<HomeController> _logger;
 
-
-        public HomeController(ILogger<HomeController> logger)
+        public ApiController(ILogger<HomeController> logger)
         {
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public string Index()
         {
-            return View();
+            return "Hi";
         }
 
-        public IActionResult Cwp()
+        public string FunctionTwo()
         {
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
+            return "two";
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
