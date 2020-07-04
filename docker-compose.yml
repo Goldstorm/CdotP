@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  cwp:
+    build: '/media/nickg/Data/projects/c-sharp/CdotP-IT-Services/cdotp.cwp/'
+    #image:  docker.pkg.github.com/goldstorm/cdotp/cdotp:latest
+    command: dotnet cdotp.cwp
+    ports:
+      - '80:80'
